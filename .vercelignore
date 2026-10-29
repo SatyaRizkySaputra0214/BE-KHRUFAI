@@ -1,0 +1,6 @@
+.env
+.postgres.env
+.npm-cache/
+certs/
+uploads/
+compose.yaml

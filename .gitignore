@@ -1,0 +1,6 @@
+.env
+.postgres.env
+.npm-cache/
+node_modules/
+uploads/
+certs/*.pem

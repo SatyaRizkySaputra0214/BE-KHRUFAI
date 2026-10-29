@@ -1,0 +1,27 @@
+{
+  "name": "khrufai-backend",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "start": "node src/local-server.ts",
+    "dev": "node --watch src/local-server.ts",
+    "typecheck": "tsc --noEmit",
+    "db:apply": "node scripts/apply-schema.ts",
+    "seed:admin": "node database/seeds/create-admin.ts"
+  },
+  "engines": {
+    "node": ">=22.18.0"
+  },
+  "dependencies": {
+    "bcryptjs": "^3.0.2",
+    "express": "^4.22.3",
+    "pg": "^8.16.3"
+  },
+  "devDependencies": {
+    "@types/express": "^4.17.25",
+    "@types/node": "^26.6.5",
+    "@types/pg": "^8.23.1",
+    "typescript": "^7.0.2"
+  }
+}
