@@ -1,3 +1,5 @@
+/// <reference path="./types/express.d.ts" />
+
 import express from 'express'
 import { errorHandler, notFoundHandler } from './middleware/error.ts'
 import { originMiddleware } from './middleware/origin.ts'
