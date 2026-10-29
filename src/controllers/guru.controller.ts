@@ -683,6 +683,11 @@ export async function handleGuruRequest({ req, res, path, session }: AreaContext
       return send(json, res, 201, { data: row })
     }
 
+    if ((match = path.match(/^\/api\/guru\/classes\/(\d+)$/)) && method === 'POST') {
+      const row = await createMeeting(guruId, { ...await getBody(), id_class: match[1] })
+      return send(json, res, 201, { data: row })
+    }
+
     if ((match = path.match(/^\/api\/guru\/meetings\/(\d+)$/))) {
       const m = await meeting(match[1], guruId)
       if (method === 'GET') return send(json, res, 200, { data: m })
